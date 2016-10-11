@@ -1,11 +1,6 @@
 # README  
-  
-This README would normally document whatever steps are necessary to get the  
-application up and running.  
-  
-Things you may want to cover:   
-  
-Ruby on Rails Employee Api with PostgreSQL.  
+   
+Ruby on Rails Employee Api with PostgreSQL.   
   
 ## Getting Started  
   
@@ -21,7 +16,8 @@ run rake db:migrate
   
 ## Tests  
   
-'rails test'
+'rails test'  
+5 runs, 7 assertions, 0 failures, 0 errors, 0 skips  
   
 ## Send JSON Post Request  
   
