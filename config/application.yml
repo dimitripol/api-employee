@@ -18,3 +18,7 @@ production:
   DB_DATABASE: employeedb_production
   DB_USERNAME: employee_postgres
   DB_PASSWORD: 12345Empl0yee!
+test:
+  DB_DATABASE: employeedb_development
+  DB_USERNAME: employee_postgres
+  DB_PASSWORD: 12345Empl0yee!

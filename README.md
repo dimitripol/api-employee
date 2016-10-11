@@ -3,16 +3,14 @@
 This README would normally document whatever steps are necessary to get the  
 application up and running.  
   
-Things you may want to cover:  
+Things you may want to cover:   
   
 Ruby on Rails Employee Api with PostgreSQL.  
   
 ## Getting Started  
   
 download this repository  
-'bundle install'  
-'figaro install'  
-
+'bundle install'   
 configure postgresql  
 start postgres server, connect to database postgres  
 create db employeedb_development  
@@ -20,6 +18,10 @@ create user employee_postgres
 run rake db:migrate  
   
 'rails s'  
+  
+## Tests  
+  
+'rails test'
   
 ## Send JSON Post Request  
   
