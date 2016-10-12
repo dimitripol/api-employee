@@ -39,13 +39,14 @@ class EmployeesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_employee
-      @employee = Employee.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_employee
+    @employee = Employee.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def employee_params
-      params.require(:employee).permit(:employeeNumber, :lastName, :firstName, :extension, :email, :officeCode, :reportsTo, :jobTitle, :photo)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def employee_params
+    params.require(:employee).permit(:employeeNumber, :lastName, :firstName, :extension, :email, :officeCode, :reportsTo, :jobTitle, :photo)
+  end
+
 end
