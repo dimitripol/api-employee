@@ -26,8 +26,8 @@ module EmployeeAPI
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+    config.autoload_paths << Rails.root.join('lib')
     config.exceptions_app = self.routes
-    
     config.middleware.use Rack::Attack
 
     config.middleware.insert_before 0, "Rack::Cors" do

@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
+
 require 'rbconfig'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
+gem 'jwt'
 gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'rack-attack'
