@@ -8,7 +8,7 @@ class EmployeesController < ApplicationController
     render json: @employees
   end
 
-  # GET /employees/1
+  # GET /employees/298486374
   def show
     render json: @employee
   end
@@ -24,7 +24,7 @@ class EmployeesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /employees/1
+  # PATCH/PUT /employees/298486374
   def update
     if @employee.update(employee_params)
       render json: @employee
@@ -33,7 +33,7 @@ class EmployeesController < ApplicationController
     end
   end
 
-  # DELETE /employees/1
+  # DELETE /employees/298486374
   def destroy
     @employee.destroy
   end

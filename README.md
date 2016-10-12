@@ -36,3 +36,7 @@ http://localhost:3000/employees
     "photo": "john.jpg"  
    }  
 }  
+  
+## Routes  
+  
+'rake routes'
