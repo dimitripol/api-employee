@@ -27,6 +27,8 @@ module EmployeeAPI
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.exceptions_app = self.routes
+    
+    config.middleware.use Rack::Attack
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
