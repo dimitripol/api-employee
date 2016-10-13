@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-
 require 'rbconfig'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'active_model_serializers', '~> 0.10.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'jwt'
