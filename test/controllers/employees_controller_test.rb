@@ -2,7 +2,15 @@ require 'test_helper'
 
 class EmployeesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @employee = employees(:one)
+    @employee = Employee.first
+    @token = SecureRandom.urlsafe_base64
+
+    @employee.api_key = @token
+    @employee.email = @token+"@test.com"
+    @employee.employeeNumber = Employee.maximum(:employeeNumber).next
+
+    # puts @employee.employeeNumber.to_s
+    # exit;
   end
 
   test "should get index" do
@@ -12,7 +20,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create employee" do
     assert_difference('Employee.count') do
-      post employees_url, params: { employee: { email: @employee.email, employeeNumber: @employee.employeeNumber, extension: @employee.extension, firstName: @employee.firstName, jobTitle: @employee.jobTitle, lastName: @employee.lastName, officeCode: @employee.officeCode, photo: @employee.photo, reportsTo: @employee.reportsTo } }, as: :json
+      post employees_url, params: { employee: { email: (@token+@employee.email), employeeNumber: @employee.employeeNumber, extension: @employee.extension, firstName: @employee.firstName, jobTitle: @employee.jobTitle, lastName: @employee.lastName, officeCode: @employee.officeCode, photo: @employee.photo, reportsTo: @employee.reportsTo, api_key: @employee.api_key } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +32,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update employee" do
-    patch employee_url(@employee), params: { employee: { email: @employee.email, employeeNumber: @employee.employeeNumber, extension: @employee.extension, firstName: @employee.firstName, jobTitle: @employee.jobTitle, lastName: @employee.lastName, officeCode: @employee.officeCode, photo: @employee.photo, reportsTo: @employee.reportsTo } }, as: :json
+    patch employee_url(@employee), params: { employee: { email: (@token+@employee.email), employeeNumber: @employee.employeeNumber, extension: @employee.extension, firstName: @employee.firstName, jobTitle: @employee.jobTitle, lastName: @employee.lastName, officeCode: @employee.officeCode, photo: @employee.photo, reportsTo: @employee.reportsTo, api_key: @employee.api_key } }, as: :json
     assert_response 200
   end
 
