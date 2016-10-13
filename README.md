@@ -22,6 +22,7 @@ create user employee_postgres
 ## Send JSON POST Request  
   
 http://localhost:3000/employees  
+<pre><code>
 {  
   "employee": {  
     "employeeNumber": 1,  
@@ -36,10 +37,11 @@ http://localhost:3000/employees
     "api_key": null  
    }  
 }  
-  
+</code></pre>
 ## Send GET Request (filtered, table column changes)
   
 http://localhost:3000/employees  
+<pre><code>
 {  
   "data": [  
     {  
@@ -58,7 +60,7 @@ http://localhost:3000/employees
     }  
   ]  
 }  
-  
+</code></pre>
 ## GET Name  
   
 http://localhost:3000/employee/John  
