@@ -1,4 +1,4 @@
 class EmployeeSerializer < ActiveModel::Serializer
-  # filter reportsTo, api_key
-  attributes :id, :employeeNumber, :lastName, :firstName, :extension, :email, :officeCode, :jobTitle, :photo
+  # filter :id, :reportsTo, :api_key
+  attributes :employeeNumber, :lastName, :firstName, :extension, :email, :officeCode, :jobTitle, :photo
 end

@@ -25,8 +25,8 @@ http://localhost:3000/employees
 {  
   "employee": {  
     "employeeNumber": 1,  
-    "lastName": "John",  
-    "firstName": "Smith",  
+    "lastName": "Smith",  
+    "firstName": "John",  
     "extension": 2,  
     "email": "johnsmith@test.com",  
     "officeCode": 3,  
@@ -36,6 +36,32 @@ http://localhost:3000/employees
     "api_key": null  
    }  
 }  
+  
+## Send GET Request (filtered, table column changes)
+  
+http://localhost:3000/employees  
+{  
+  "data": [  
+    {  
+      "id": "12345",  
+      "type": "employees",  
+      "attributes": {  
+        "employee-number": 1,  
+        "last-name": "Smith",  
+        "first-name": "John",  
+        "extension": 2,  
+        "email": "johnsmith@test.com",  
+        "office-code": 3,  
+        "job-title": "developer",  
+        "photo": "john.jpg"  
+      }  
+    }  
+  ]  
+}  
+  
+## GET Name  
+  
+http://localhost:3000/employee/John  
   
 ## Routes  
   

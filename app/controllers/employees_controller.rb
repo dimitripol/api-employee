@@ -13,6 +13,12 @@ class EmployeesController < ApplicationController
     render json: @employee
   end
 
+  # GET /employee/name
+  def get_name
+    @emp = Employee.where(firstName: params[:firstName])
+    render json: @emp
+  end
+
   # POST /employees
   def create
     @employee = Employee.new(employee_params)
