@@ -6,6 +6,7 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'figaro'
 gem 'knock'
+gem 'listen', '3.0.6'
 gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'rack-attack'
@@ -20,7 +21,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end

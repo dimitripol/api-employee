@@ -16,7 +16,9 @@ create user employee_postgres
   
 ## Knock token  
 
-  
+'rails generate knock:install'  
+'rails generate knock:token_controller user'  
+    
 ## Tests  
   
 'rails test'  

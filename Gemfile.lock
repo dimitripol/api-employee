@@ -65,9 +65,9 @@ GEM
       bcrypt (~> 3.1)
       jwt (~> 1.5)
       rails (>= 4.2)
-    listen (3.0.8)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
+    listen (3.0.6)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9.7)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -145,7 +145,7 @@ DEPENDENCIES
   byebug
   figaro
   knock
-  listen (~> 3.0.5)
+  listen (= 3.0.6)
   pg
   puma (~> 3.0)
   rack-attack
