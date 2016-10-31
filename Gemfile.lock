@@ -43,7 +43,7 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    arel (7.1.2)
+    arel (7.1.4)
     bcrypt (3.1.11)
     builder (3.2.2)
     byebug (9.0.6)
@@ -55,12 +55,16 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
-    jsonapi (0.1.1.beta5)
-      jsonapi-parser (= 0.1.1.beta2)
+    jsonapi (0.1.1.beta6)
+      jsonapi-parser (= 0.1.1.beta3)
       jsonapi-renderer (= 0.1.1.beta1)
-    jsonapi-parser (0.1.1.beta2)
+    jsonapi-parser (0.1.1.beta3)
     jsonapi-renderer (0.1.1.beta1)
     jwt (1.5.6)
+    knock (2.0)
+      bcrypt (~> 3.1)
+      jwt (~> 1.5)
+      rails (>= 4.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -140,7 +144,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
   figaro
-  jwt
+  knock
   listen (~> 3.0.5)
   pg
   puma (~> 3.0)
@@ -153,4 +157,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.13.2
+   1.13.6
