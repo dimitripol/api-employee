@@ -1,5 +1,6 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: [:show, :update, :destroy]
+  # before_action :authenticate_user
 
   # GET /employees
   def index

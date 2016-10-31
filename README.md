@@ -18,6 +18,14 @@ create user employee_postgres
 
 'rails generate knock:install'  
 'rails generate knock:token_controller user'  
+
+## Create Api user  
+'rails c'  
+'User.create(email: 'apiuser@yourdomain.com', password: 'yourpassword', password_confirmation: 'yourpassword')'  
+  
+## Authenticate  
+  
+http://localhost:3000/user_token  
     
 ## Tests  
   
@@ -66,6 +74,7 @@ http://localhost:3000/employees
   ]  
 }  
 </code></pre>
+
 ## GET Name  
   
 http://localhost:3000/employee/John  
